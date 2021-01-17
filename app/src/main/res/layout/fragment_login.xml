@@ -122,19 +122,36 @@
 
                 </RelativeLayout>
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnLogin"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:stateListAnimator="@null"
                     android:layout_marginTop="15dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:text="Log In"
-                    android:textAllCaps="false"
-                    app:cornerRadius="5dp"
-                    android:padding="13dp"
-                    android:textColor="#FFFFFF"/>
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stateListAnimator="@null"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Log In"
+                        android:textAllCaps="false"
+                        app:cornerRadius="5dp"
+                        android:padding="13dp"
+                        android:textColor="#FFFFFF"/>
+
+                    <ProgressBar
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:backgroundTint="@color/white"
+                        android:indeterminateTint="@color/white"
+                        android:visibility="gone"
+                        android:progressTint="@color/white"
+                        android:progressBackgroundTint="@color/white"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"

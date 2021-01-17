@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "546422954355",
+    "project_id": "chatkuy-908fc",
+    "storage_bucket": "chatkuy-908fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546422954355:android:e06ef08e680b7afe698d06",
+        "android_client_info": {
+          "package_name": "id.dupat.chatkuy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546422954355-uovm08miqcpa6b4pui6rgl66umo6u4b0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.dupat.chatkuy",
+            "certificate_hash": "3ec5beb809a846470d6868ecad073c2e71d98fdd"
+          }
+        },
+        {
+          "client_id": "546422954355-ma1jpjklojr3gag5jr2s1ckkga7n5pjr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMJVriOHbxUaWIsrRDQMjy8E-VfeRZW1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546422954355-ma1jpjklojr3gag5jr2s1ckkga7n5pjr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
