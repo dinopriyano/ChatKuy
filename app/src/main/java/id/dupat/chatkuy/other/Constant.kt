@@ -4,5 +4,6 @@ class Constant {
     companion object{
         var pathLogin: String = "auth/login"
         var pathRegister: String = "auth/register"
+        var USER_COLLECTION = "users"
     }
 }

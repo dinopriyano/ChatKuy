@@ -9,25 +9,8 @@ import javax.crypto.IllegalBlockSizeException
 import javax.crypto.NoSuchPaddingException
 import javax.crypto.spec.SecretKeySpec
 
-class AESEncryption {
-    private val encryptionKey = byteArrayOf(
-        9,
-        115,
-        51,
-        86,
-        105,
-        4,
-        -31,
-        -23,
-        -68,
-        88,
-        17,
-        20,
-        3,
-        -105,
-        119,
-        -53
-    )
+class Encryption {
+    private val encryptionKey = byteArrayOf(3, 19, 27, 9, 17, 99, -21, 10, -99, 29, 18, -70, 6, -103, 109, -74)
     private var cipher: Cipher? = null
     private  var decipher:Cipher? = null
     private var secretKeySpec: SecretKeySpec? = null
@@ -45,7 +28,7 @@ class AESEncryption {
         secretKeySpec = SecretKeySpec(encryptionKey, "AES")
     }
 
-    public fun AESEncryptionMethod(string: String): String? {
+    fun encryptionMethod(string: String): String? {
         val stringByte = string.toByteArray()
         var encryptedByte: ByteArray? = ByteArray(stringByte.size)
         try {
@@ -69,7 +52,7 @@ class AESEncryption {
     }
 
     @Throws(UnsupportedEncodingException::class)
-    public fun AESDecryptionMethod(string: String): String? {
+    fun decryptionMethod(string: String): String? {
         val EncryptedByte = string.toByteArray(charset("ISO-8859-1"))
         var decryptedString: String? = string
         val decryption: ByteArray

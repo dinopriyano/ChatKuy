@@ -8,6 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="modern_blue">#1CA7EC</color>
+    <color name="modern_blue_disable">#62C7FA</color>
+    <color name="transparent">#00FFFFFF</color>
 
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#CACACA</color>
 

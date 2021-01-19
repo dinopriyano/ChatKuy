@@ -1,5 +1,6 @@
-package id.dupat.chatkuy.database
+package id.dupat.chatkuy.remote
 
+import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.FirebaseFirestore
 import id.dupat.chatkuy.entities.User
 import id.dupat.chatkuy.other.Constant
@@ -19,7 +20,14 @@ class UserDatabase {
                     .toObjects(User::class.java)
         }
         catch (e : Exception){
+            e.printStackTrace()
             emptyList()
         }
+    }
+
+    fun addUser(user: User): Task<Void> {
+        val doc = userColection.document()
+        user.id = doc.id
+        return doc.set(user)
     }
 }
