@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nenu_chat"
+        android:title="@string/chat"
+        android:icon="@drawable/ic_chat"/>
+
+    <item
+        android:id="@+id/nenu_group"
+        android:title="@string/group"
+        android:icon="@drawable/ic_team"/>
+
+    <item
+        android:id="@+id/nenu_notif"
+        android:title="@string/notification"
+        android:icon="@drawable/ic_heart"/>
+
+</menu>

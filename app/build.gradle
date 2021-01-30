@@ -186,4 +186,10 @@ dependencies {
 
     // Firebase Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
+
+    //Notification badges
+    implementation 'com.nex3z:notification-badge:1.0.4'
+
+    //cardview shadow
+    implementation 'com.loopeer.lib:shadow:0.0.4-beta3'
 }

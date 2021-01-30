@@ -5,6 +5,7 @@ import android.content.Context
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.navigation.NavOptions
 import com.google.android.material.snackbar.Snackbar
 import com.pd.chocobar.ChocoBar
 import id.dupat.chatkuy.R
@@ -22,6 +23,11 @@ fun View.snackbar(msg: String)
             snackbar.dismiss()
         }
     }.show()
+}
+
+fun Int.navOption() : NavOptions
+{
+    return NavOptions.Builder().setPopUpTo(this, true).build()
 }
 
 fun Context.hideKeyboard(view: View) {

@@ -2,6 +2,7 @@ package id.dupat.chatkuy
 
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -29,16 +30,28 @@ class NavigationActivity : AppCompatActivity() {
 //                window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 hideNavigationBar()
             }
+            R.id.chatFragment -> {
+                setAdjustPan()
+            }
             else -> {
 //                window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_VISIBLE
                 showNavigationBar()
+                setAdjustResize()
             }
         }
     }
 
+    private fun setAdjustResize(){
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+    }
+
+    private fun setAdjustPan(){
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+    }
+
     private fun hideNavigationBar() {
-        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        window.decorView.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                 or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)

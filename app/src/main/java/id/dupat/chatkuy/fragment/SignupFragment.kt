@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ProgressBar
+import android.widget.RelativeLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -29,6 +32,9 @@ class SignupFragment : Fragment(R.layout.fragment_signup),View.OnClickListener,T
 
     lateinit var viewModel: SignupViewModel
     private var binding: FragmentSignupBinding? = null
+    lateinit var btnSignUp: Button
+    lateinit var progressSignup: ProgressBar
+    lateinit var containerSignup: RelativeLayout
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -40,7 +46,9 @@ class SignupFragment : Fragment(R.layout.fragment_signup),View.OnClickListener,T
         txtName.addTextChangedListener(this)
         txtUsername.addTextChangedListener(this)
         txtPassword.addTextChangedListener(this)
-        requireActivity().toast("view created")
+        btnSignUp = view.findViewById(R.id.btnSignup)
+        progressSignup = view.findViewById(R.id.progressSignup)
+        containerSignup = view.findViewById(R.id.containerSignup)
         handleUIState(view)
     }
 
@@ -49,16 +57,16 @@ class SignupFragment : Fragment(R.layout.fragment_signup),View.OnClickListener,T
             when (it) {
                 is ViewState.IsLoading -> {
                     if (it.state) {
-                        requireView().btnSignup.text = "."
-                        requireView().progressSignup.visibility = View.VISIBLE
+                        btnSignup.text = "."
+                        progressSignup.visibility = View.VISIBLE
                     } else {
-                        requireView().btnSignup.text = getString(R.string.login)
-                        requireView().progressSignup.visibility = View.GONE
+                        btnSignup.text = getString(R.string.login)
+                        progressSignup.visibility = View.GONE
                     }
                 }
 
                 is ViewState.Error -> {
-                    requireView().containerSignup.snackbar(it.err!!)
+                    containerSignup.snackbar(it.err!!)
                 }
 
                 is ViewState.IsSuccess -> {

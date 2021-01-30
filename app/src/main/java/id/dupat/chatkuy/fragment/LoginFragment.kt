@@ -16,6 +16,7 @@ import id.dupat.chatkuy.R
 import id.dupat.chatkuy.databinding.FragmentLoginBinding
 import id.dupat.chatkuy.entities.User
 import id.dupat.chatkuy.other.Encryption
+import id.dupat.chatkuy.other.navOption
 import id.dupat.chatkuy.other.snackbar
 import id.dupat.chatkuy.other.toast
 import id.dupat.chatkuy.viewmodel.LoginViewModel
@@ -70,7 +71,9 @@ class LoginFragment : Fragment(), View.OnClickListener, TextWatcher {
                     when (it.what) {
                         1 -> {
                             val data = it.data as User
-                            Log.d("TAG", "handleUIState: ${data}")
+
+                            val action = LoginFragmentDirections.actionLoginFragmentToChatFragment()
+                            findNavController().navigate(action,R.id.loginFragment.navOption())
                         }
                     }
                 }

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:visibility="visible"
+        android:gravity="center"
+        android:id="@+id/containerNotSeen"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="1dp"
+            android:background="@color/modern_blue"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="10sp"
+            android:fontFamily="@font/notosans_regular"
+            android:textColor="@color/modern_blue"
+            android:layout_height="wrap_content"
+            android:text="4 Unread Message"/>
+
+        <View
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="1dp"
+            android:background="@color/modern_blue"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerMessageLeft"
+        android:layout_width="match_parent"
+        android:layout_marginRight="50dp"
+        android:gravity="start"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.loopeer.shadow.ShadowView
+            android:layout_marginLeft="10dp"
+            android:padding="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cornerRadiusBL="7dp"
+            app:cornerRadiusTR="7dp"
+            app:cornerRadiusBR="7dp"
+            app:backgroundColor="#F1F1F1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/txtMessage"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_height="wrap_content"
+                    android:text="Hallo gan"/>
+
+                <TextView
+                    android:textColor="#535353"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:textSize="10sp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/txtMessageTime"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_height="wrap_content"
+                    android:text="20:34"/>
+
+            </LinearLayout>
+
+        </com.loopeer.shadow.ShadowView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerMessageLeftNext"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_marginRight="50dp"
+        android:gravity="start"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.loopeer.shadow.ShadowView
+            android:layout_marginLeft="10dp"
+            android:padding="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cornerRadius="7dp"
+            app:backgroundColor="#F1F1F1">
+
+            <TextView
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:id="@+id/txtMessageNext"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_height="wrap_content"
+                android:text="Hallo gan"/>
+
+        </com.loopeer.shadow.ShadowView>
+
+    </LinearLayout>
+
+</LinearLayout>
